@@ -22,10 +22,9 @@ public class OddSumTest {
     @Test
     public void testException() throws Exception {
     	String[] in = {"1", "2", "3", "4", "5", "a"};
-    	try {
-            Assert.assertEquals(-1, OddSum.run(in, true));
-        } catch (NumberFormatException e) {
-        }
+
+    	Assert.assertEquals(-1, OddSum.run(in, true));
+
 
     }
 

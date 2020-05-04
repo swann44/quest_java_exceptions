@@ -8,6 +8,7 @@ public class OddSum {
 
     public static int run(String[] args, boolean test) {
 
+        try {
         ArrayList<Integer> listInt = new ArrayList<>();
         int res;
         if (!test) {
@@ -20,15 +21,19 @@ public class OddSum {
             listInt.add(Integer.parseInt(args[i]));
         }
 
-        res = sum(listInt);
-        if (test) {
-            return res;
+
+            res = sum(listInt);
+            if (test) {
+                return res;
+            }
+
+            System.out.println("Sum of odd elements : " + res);
+            System.out.println("END!");
+
+            return 0;
+        } catch (NumberFormatException e) {
+            return -1;
         }
-
-        System.out.println("Sum of odd elements : " + res);
-        System.out.println("END!");
-
-        return 0;
     }
 
     public static int sum(ArrayList<Integer> listInt) {
